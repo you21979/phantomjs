@@ -11,7 +11,7 @@ builddir=${TMPDIR:-/tmp}/${name}-${version}
 sourcedir="${topdir}/SOURCES"
 buildroot="${topdir}/BUILD/${name}-${version}-root"
 mkdir -p ${topdir}/RPMS ${topdir}/SRPMS ${topdir}/SOURCES ${topdir}/BUILD
-mkdir -p ${buildroot} ${builddir}
+mkdir -p ${buildroot} ${builddir} ${sourcedir}
 echo "=> Copying sources..."
 ( cd .. && tar cf - ./[A-Z]* ./bin ./examples | tar xf - -C ${builddir} )
 echo "=> Creating source tarball under ${sourcedir}..."
